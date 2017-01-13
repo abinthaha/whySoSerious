@@ -324,3 +324,18 @@ html {
 .hint-container.active {
     display: block;
 }
+
+.back-button button {
+    padding: 10px 15px;
+    min-width: 100px;
+    background-color: #2967b2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button button:hover {
+    background-color: #0a3b75;
+    box-shadow: 2px 2px 7px 2px #BBB;
+}
