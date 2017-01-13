@@ -1,5 +1,18 @@
-var travelBuddy = angular.module("travelBuddy", []);
+(function() {
+    'use strict';
 
-travelBuddy.controller('mainController', function($scope){
-    console.log('Hai');
-});
+    angular.module('whySoSerious', [
+    		'ui.router',
+            'whySoSerious.home',
+            'whySoSerious.login',
+            'whySoSerious.levels'
+        ])
+        .config(['$urlRouterProvider', '$httpProvider',routeConfig])
+        .constant('ROOT', './app/components');
+
+    /* @ngInject */
+
+    function routeConfig($urlRouterProvider, $httpProvider) {
+        $urlRouterProvider.otherwise('/home');
+    }
+})();

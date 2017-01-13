@@ -1,18 +1,30 @@
-<html>
-   <head>
-      <title>Y so Serious ???</title>
-      <link rel="icon" href="assets\img\icon.png">
-      <link rel="stylesheet" href="assets\css\styles.css">
-   </head>
-   <body>
-      <h1>Sample Application</h1>
-      <div ng-app="travelBuddy" ng-controller="mainController">
-         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
-         <p>Hello <span ng-bind = "name"></span>!</p>
-      </div>
-   </body>
-   <script src="assets\libs\angular\angular.min.js"></script>
-   <script src="assets\libs\react\react.js"></script>
-   <script src="assets\libs\react\react-dom.js"></script>
-   <script src="app\app.module.js"></script>
+<!DOCTYPE html>
+<html ng-app="whySoSerious">
+
+<head>
+    <title>Y so Serious ???</title>
+    <link rel="icon" href="assets\img\icon.png">
+    <link rel="stylesheet" href="assets\css\styles.css">
+</head>
+
+<body>
+    <ui-view></ui-view>
+    <script src="./assets/libs/angular/angular.min.js"></script>
+    <script src="./assets/libs/angular/angular-ui-router.min.js"></script>
+    <!--Home-->
+    <script type="text/javascript" src="./app/components/home/homeApp.js"></script>
+    <script type="text/javascript" src="./app/components/home/homeCtrl.js"></script>
+
+     <!--Home-->
+    <script type="text/javascript" src="./app/components/login/loginApp.js"></script>
+    <script type="text/javascript" src="./app/components/login/loginCtrl.js"></script>
+
+     <!--Home-->
+    <script type="text/javascript" src="./app/components/levels/levelsApp.js"></script>
+    <script type="text/javascript" src="./app/components/levels/levelCtrl.js"></script>
+    <script type="text/javascript" src="./app/components/levels/questionCtrl.js"></script>
+
+    <script src="./app/app.module.js"></script>
+</body>
+
 </html>
