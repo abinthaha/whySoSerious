@@ -6,22 +6,30 @@
     /* @ngInject */
     function questionCtrl($scope) {
 
-    	$scope.questions = [
-    		{
-    			'dialog': 'Why so serious? Let’s put a smile on that face.',
-    			'answer': 'dark knight',
-    			'hint': 'Bat'
-    		},
-    		{
-    			'dialog': 'I’ll make him an offer he can’t refuse..',
-    			'answer': 'The godFather',
-    			'hint': 'father'
-    		},
-    	]
+        $scope.questions = [{
+            'dialog': 'Why so serious? Let’s put a smile on that face.',
+            'answer': 'dark knight',
+            'hint': 'Bat'
+        }, {
+            'dialog': 'I’ll make him an offer he can’t refuse..',
+            'answer': 'The godFather',
+            'hint': 'father'
+        }, {
+            'dialog': 'I’ll make him an offer he can’t refuse..',
+            'answer': 'The godFather',
+            'hint': 'father'
+        }, {
+            'dialog': 'I’ll make him an offer he can’t refuse..',
+            'answer': 'The godFather',
+            'hint': 'father'
+        }, {
+            'dialog': 'I’ll make him an offer he can’t refuse..',
+            'answer': 'The godFather',
+            'hint': 'father'
+        } ]
 
-
-    	// $scope.showHintsForTheQuestion = function (this) {
-    		
-    	// }
+        $scope.showHintsForTheQuestion = function() {
+            debugger;
+        }
     }
 })();
