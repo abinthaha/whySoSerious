@@ -1,16 +1,11 @@
-<a href="#" ng-click="signOut();">Sign out</a>
-
 <section class="login-container" ng-controller="loginCtrl">
     <div class="login-wrapper">
-        <div class="login-using">Login Using</div>
+        <div class="login-using">Please signin using</div>
         <div class="login-item-container">
-            <div class="login-item facebook">
-                <span class="name">Facebook</span>
-                <span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-            </div>
             <div class="login-item">
-                <span id="signInButton">
-                    </span>
+                <button class="loginBtn loginBtn--google" ng-click="renderSignInButton()">
+                    Google
+                </button>
             </div>
         </div>
     </div>
