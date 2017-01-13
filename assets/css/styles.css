@@ -1,24 +1,84 @@
-body {
-    background-color: #ddd;
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #87b5c4;
 }
-
+.login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-container .login-wrapper {
+    padding: 30px 50px;
+    background-color: #eee;
+    box-shadow: 0 0 13px 1px #ddd;
+    border-radius: 5px;
+}
+.login-container .login-wrapper .login-item-container {
+    margin-top: 40px;
+}
+.login-container .login-wrapper .login-item-container .login-using {
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+.login-container .login-wrapper .login-item-container .login-item {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    min-width: 200px;
+    color: #222;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-container .login-wrapper .login-item-container .login-item:hover {
+    color: #fff;
+}
+.login-container .login-wrapper .login-item-container .login-item.facebook:hover {
+    background-color: #3d5a96;
+    border-color: transparent;
+}
+.login-container .login-wrapper .login-item-container .login-item.google:hover {
+    background-color: #df4a32;
+    border-color: transparent;
+}
+.login-container .login-wrapper .login-item-container .login-item .name {
+    width: 70%;
+    display: inline-block;
+}
+.login-container .login-wrapper .login-item-container .login-item.facebook {
+    border: 1px solid #3d5a96;
+}
+.login-container .login-wrapper .login-item-container .login-item.google {
+    border: 1px solid #df4a32;
+}
 
 /*# sourceMappingURL=styles.css.map */
 
 .question-wrap {
     display: block;
 }
-
 .questions-container {
     background-color: #fff;
 }
-
 .questions-container .questions-ul {
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
-
 .questions-container .questions-ul li {
     list-style: none;
     flex-grow: 1;
@@ -31,7 +91,6 @@ body {
     margin-left: 5%;
     position: relative;
 }
-
 .questions-container .questions-ul li .que-number {
     position: absolute;
     display: inline-flex;
@@ -46,15 +105,12 @@ body {
     top: 20%;
     left: -50px;
 }
-
 .questions-container .questions-ul li .question-name {
     padding-left: 50px;
 }
-
 .questions-container .questions-ul li .question-name h4 {
     font-size: 20px;
 }
-
 .questions-container .questions-ul li .question-name .answer-type-area {
     border: 1px solid #ddd;
     padding: 15px;
@@ -62,29 +118,22 @@ body {
     width: 60%;
     transition: all 0.3s ease;
 }
-
-.questions-container .questions-ul li .question-name .answer-type-area:focus,
-.questions-container .questions-ul li .question-name .answer-type-area:hover {
+.questions-container .questions-ul li .question-name .answer-type-area:focus, .questions-container .questions-ul li .question-name .answer-type-area:hover {
     border-color: transparent;
     outline: none;
     box-shadow: 0px 0px 10px 3px #ddd;
 }
-
 .questions-container .questions-ul li .hints {
     margin-top: 20px;
     position: relative;
 }
-
 .questions-container .questions-ul li .hint-attract img {
     height: 20px;
     width: 20px;
 }
-
-.questions-container .questions-ul li .hint-attract:hover + .hint-number-container,
-.questions-container .questions-ul li .hint-number-container:hover {
+.questions-container .questions-ul li .hint-attract:hover+.hint-number-container, .questions-container .questions-ul li .hint-number-container:hover {
     transform: scale(1.2, 1.2);
 }
-
 .questions-container .questions-ul li .hint-number-container {
     transform: scale(0);
     position: absolute;
@@ -96,11 +145,9 @@ body {
     cursor: pointer;
     transition: all 0.5s ease;
 }
-
 .hint-container {
-	display: none;
+    display: none;
 }
-
 .hint-container.active {
-	display: block;
+    display: block;
 }
