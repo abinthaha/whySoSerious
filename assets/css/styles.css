@@ -48,48 +48,59 @@ body {
 }
 
 .questions-container .questions-ul li .question-name {
-	padding-left: 50px;
+    padding-left: 50px;
 }
 
 .questions-container .questions-ul li .question-name h4 {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 .questions-container .questions-ul li .question-name .answer-type-area {
-	border: 1px solid #ddd;
-	padding: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
     border-radius: 25px;
     width: 60%;
     transition: all 0.3s ease;
 }
 
-.questions-container .questions-ul li .question-name .answer-type-area:focus, 
+.questions-container .questions-ul li .question-name .answer-type-area:focus,
 .questions-container .questions-ul li .question-name .answer-type-area:hover {
-	border-color: transparent;
-	outline: none;
-	box-shadow: 0px 0px 10px 3px #ddd;
+    border-color: transparent;
+    outline: none;
+    box-shadow: 0px 0px 10px 3px #ddd;
 }
 
-.hints {
-	margin-top: 20px;
-	position: relative;
+.questions-container .questions-ul li .hints {
+    margin-top: 20px;
+    position: relative;
 }
 
-.hint-attract img {
-	height: 20px;
-	width: 20px;
+.questions-container .questions-ul li .hint-attract img {
+    height: 20px;
+    width: 20px;
 }
 
-.hint-attract:hover + .hint-number-container, .hint-number-container:hover {
-	display: block;
+.questions-container .questions-ul li .hint-attract:hover + .hint-number-container,
+.questions-container .questions-ul li .hint-number-container:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.questions-container .questions-ul li .hint-number-container {
+    transform: scale(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 10px 3px #ddd;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 .hint-container {
 	display: none;
-	position: absolute;
-	left: 0;
-	top: 0;
-	background-color: #fff;
-	padding: 10px;
-	box-shadow: 1px 1px 10px 3px #ddd;
+}
+
+.hint-container.active {
+	display: block;
 }

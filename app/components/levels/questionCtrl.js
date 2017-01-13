@@ -4,24 +4,24 @@
     angular.module('whySoSerious.levels')
         .controller('questionCtrl', questionCtrl);
     /* @ngInject */
-    function questionCtrl() {
+    function questionCtrl($scope) {
 
     	$scope.questions = [
     		{
-    			'dialog': 'Why so serious? Let’s put a smile on that face.'
+    			'dialog': 'Why so serious? Let’s put a smile on that face.',
     			'answer': 'dark knight',
     			'hint': 'Bat'
     		},
     		{
-    			'dialog': 'I’ll make him an offer he can’t refuse..'
+    			'dialog': 'I’ll make him an offer he can’t refuse..',
     			'answer': 'The godFather',
     			'hint': 'father'
     		},
     	]
 
 
-    	$scope.showHintsForTheQuestion = function () {
+    	// $scope.showHintsForTheQuestion = function (this) {
     		
-    	}
+    	// }
     }
 })();
