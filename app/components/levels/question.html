@@ -1,5 +1,6 @@
 <div class="questions-container">
     <ul class="questions-ul">
+        {{questions}}
         <li ng-repeat="question in questions">
             <span class="que-number">1</span>
             <div class="question-name">
@@ -8,34 +9,6 @@
                 <aside class='hints'>
                     <span class="hint-attract"><img src="../assets/img/hint.png"></span>
                     <div class="hint-container">
-                        <span class='hint-no'>1</span>
-                        <span class="hint-name">Hint</span>
-                    </div>
-                </aside>
-            </div>
-        </li>
-        <li>
-            <span class="que-number">2</span>
-            <div class="question-name">
-                <h4>fsfsfsdfsdf</h4>
-                <input type="text" class="answer-type-area" />
-                <aside class='hints'>
-                    <span class="hint-attract"><img src="../assets/img/hint.png"></span>
-                    <div class="hint-container">
-                        <span class='hint-no'>1</span>
-                        <span class="hint-name">Hint</span>
-                    </div>
-                </aside>
-            </div>
-        </li>
-        <li>
-            <span class="que-number">3</span>
-            <div class="question-name">
-                <h4>dffdfsgfasgfdg</h4>
-                <input type="text" class="answer-type-area" />
-                <aside class='hints'>
-                    <span class="hint-attract"><img src="../assets/img/hint.png"></span>
-                    <div class="hint-number-container" ng-click="showHintsForTheQuestion()">
                         <span class='hint-no'>1</span>
                         <span class="hint-name">Hint</span>
                     </div>
