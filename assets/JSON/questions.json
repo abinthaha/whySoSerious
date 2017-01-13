@@ -1,0 +1,51 @@
+[{
+    "answer": "Appollo 13",
+    "hint": "Tom Hanks",
+    "id": 1,
+    "dialog": "Houston, we have a problem."
+},{
+    "answer": "dark knight",
+    "hint": "Jocker",
+    "id": 2,
+    "dialog": "Why so serious? Let’s put a smile on that face"
+},{
+    "answer": "Batman begins",
+    "hint": "Bale",
+    "id": 3,
+    "dialog": "Why do we fall sir? So that we can learn to pick ourselves up."
+},{
+    "answer": "the dictator",
+    "hint": "Aladdin",
+    "id": 4,
+    "dialog": "My name is Allison Burgers"
+},{
+    "answer": "The Sixth Sense",
+    "hint": "M Knight Syamalan",
+    "id": 5,
+    "dialog": "I see dead people."
+},{
+    "answer": "Braveheart",
+    "hint": "William Wallace",
+    "id": 6,
+    "dialog": "“They may take our lives, but they will never take... our FREEDOM!” "
+},{
+    "answer": "Gladiator",
+    "hint": "Warrior",
+    "id": 7,
+    "dialog": "“I will have my vengeance, in this life or the next.”"
+},{
+    "answer": "titanic",
+    "hint": "April 14",
+    "id": 8,
+    "dialog": "“I’m the king of the world!”"
+},{
+    "answer": "the lord of the rings",
+    "hint": "Hobbit",
+    "id": 9,
+    "dialog": "“My precious…”"
+},{
+    "answer": "Taxi driver",
+    "hint": "Taxi driver",
+    "id": 10,
+    "dialog": "“Are you talkin' to me?”"
+}]

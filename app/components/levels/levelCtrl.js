@@ -4,15 +4,16 @@
     angular.module('whySoSerious.levels')
         .controller('levelCtrl', levelCtrl);
     /* @ngInject */
-    function levelCtrl($scope, $firebaseArray ) {
-        var promise = $firebaseArray (firebase.database().ref().child("hackBurst").child("Levels"));
-        $scope.levels = []
+    function levelCtrl($scope, $http, $rootScope) {
+        $scope.levels = [];
+        $http.get('assets/JSON/levels.json').success(function(response) {
+            $scope.levels = response;
+        });
 
-        promise.$loaded().then(function() {
-            angular.forEach(promise, function(value) {
-                $scope.levels.push(value);
-                console.log(value)
-            });
+        $rootScope.user = [];
+        $http.get('assets/JSON/users.json').success(function(response) {
+            $rootScope.user = response[0];
+            localStorage.setItem('userData',JSON.stringify(response[0]));
         });
     }
 })();

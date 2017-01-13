@@ -1,23 +1,36 @@
-<div class="hint-model">
+
+<div class="user-bar">
+    <div class="user-details">
+        <span>username: {{user.email}}</span>
+        <img src="assets\img\icon.png" class="icon" />
+        <span class="points">
+            Points: {{user.points}}
+        </span>
+        <img src="assets\img\points.png" class="icon" />
+    </div>
 </div>
-<div class="questions-container">
-    <ul class="questions-ul">
-        <li ng-repeat="question in questions track by $index">
-            <span class="que-number">{{$index+1}}</span>
-            <div class="question-name">
-                <h4>{{question.dialog}}</h4>
-                <input type="text" class="answer-type-area" placeholder="Your Answer Here... " />
-                <aside class='hints'>
-                    <span class="hint-attract"><img src="../assets/img/hint.png"></span>
-                    <div class="hint-number-container" ng-click="showHintsForTheQuestion(this)">
-                        <span class='hint-no'>1</span>
-                        <span class="hint-name">Hint</span>
-                    </div>
-                    <div class="hint-container">
-                    	{{question.hint}}
-                    </div>
-                </aside>
-            </div>
-        </li>
-    </ul>
-</div>
+
+<section class="question-wrapper">
+    <div class="questions-nav">
+        <ul>
+            <li ng-repeat="value in questions track by $index" ng-class="{active: questions[$index].id == currentQuestion.id}" ng-click="getQuestions($index)">Question {{$index+1}}</li>
+        </ul>
+    </div>
+    <div class="questions-container">
+        <ul class="questions-ul">
+            <li>
+                <div class="question-name">
+                    <h4>{{currentQuestion.dialog}}</h4>
+                    <input type="text" class="answer-type-area" ng-class="{'que-solved': currentQuestion.disabled}" ng-disabled="currentQuestion.disabled" placeholder="Your Answer Here...(Press Enter to Submit) " ng-model='answer' ng-enter="checkAnswer()"/>
+                    <aside class='hints'>
+                        <span class="hint-attract"><img src="../assets/img/hint.png"></span>
+                        <div class="hint-number-container" ng-click="showHintsForTheQuestion(this)">
+                            <span class='hint-no'>1</span>
+                            <span class="hint-name">{{currentQuestion.hint}}</span>
+                        </div>
+                    </aside>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
