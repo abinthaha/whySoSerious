@@ -1,0 +1,23 @@
+{
+  "name": "serious",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "ng-google-signin": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abinthaha/AppStructure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abinthaha/AppStructure/issues"
+  },
+  "homepage": "https://github.com/abinthaha/AppStructure#readme",
+  "description": ""
+}

@@ -1,4 +1,59 @@
-body {
-  background-color: #ddd; }
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #87b5c4; }
+
+.login-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .login-container .login-wrapper {
+    padding: 30px 50px;
+    background-color: #eee;
+    box-shadow: 0 0 13px 1px #ddd;
+    border-radius: 5px; }
+    .login-container .login-wrapper .login-item-container {
+      margin-top: 40px; }
+      .login-container .login-wrapper .login-item-container .login-using {
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #ddd; }
+      .login-container .login-wrapper .login-item-container .login-item {
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        min-width: 200px;
+        color: #222;
+        background-color: transparent;
+        transition: all 0.3s ease;
+        border-radius: 3px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .login-container .login-wrapper .login-item-container .login-item:hover {
+          color: #fff; }
+        .login-container .login-wrapper .login-item-container .login-item.facebook:hover {
+          background-color: #3d5a96;
+          border-color: transparent; }
+        .login-container .login-wrapper .login-item-container .login-item.google:hover {
+          background-color: #df4a32;
+          border-color: transparent; }
+        .login-container .login-wrapper .login-item-container .login-item .name {
+          width: 70%;
+          display: inline-block; }
+      .login-container .login-wrapper .login-item-container .login-item.facebook {
+        border: 1px solid #3d5a96; }
+      .login-container .login-wrapper .login-item-container .login-item.google {
+        border: 1px solid #df4a32; }
 
 /*# sourceMappingURL=styles.css.map */
