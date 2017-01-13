@@ -11,6 +11,7 @@
                 url: "/home",
                 templateUrl: './app/components/home/home.html',
                 controller: 'homeCtrl'
-            });            
+            });
+        $urlRouterProvider.otherwise('/home');
     }
 })();
