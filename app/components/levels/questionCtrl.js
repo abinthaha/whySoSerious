@@ -4,11 +4,20 @@
     angular.module('whySoSerious.levels')
         .controller('questionCtrl', questionCtrl);
     /* @ngInject */
-    function questionCtrl($scope, $stateParams, $filter, $http) {
-        var level;
+    function questionCtrl($scope) {
 
-        $scope.questions = [];
-        $scope.hints = [];
+    	$scope.questions = [
+    		{
+    			'dialog': 'Why so serious? Let’s put a smile on that face.',
+    			'answer': 'dark knight',
+    			'hint': 'Bat'
+    		},
+    		{
+    			'dialog': 'I’ll make him an offer he can’t refuse..',
+    			'answer': 'The godFather',
+    			'hint': 'father'
+    		},
+    	]
 
         $http.get('assets/JSON/levels.json').success(function(response) {
             level = $filter('filter')(response, { id: parseInt($stateParams.levelId) }, true);
@@ -23,8 +32,8 @@
             }
         });
 
-        function getHints(){
-            
-        }
+    	// $scope.showHintsForTheQuestion = function (this) {
+
+    	// }
     }
 })();
