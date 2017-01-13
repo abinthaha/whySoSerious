@@ -17,7 +17,7 @@
                 controller: 'levelCtrl'
             })
             .state('levels.question', {
-                url: "/question",
+                url: "/question/:levelId",
                 templateUrl: './app/components/levels/question.html',
                 controller: 'questionCtrl'
             });
