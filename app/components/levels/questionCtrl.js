@@ -49,6 +49,7 @@
             if (!$scope.questions[$scope.currentIndex].hintShown) {
                 $rootScope.user.points -= 5;
                 $scope.questions[$scope.currentIndex].hintShown = true;
+                $scope.questions[$scope.currentIndex].hintActive = true;
                 localStorage.setItem('userData', JSON.stringify($rootScope.user));
                 return $scope.currentQuestion.hint;
             }
