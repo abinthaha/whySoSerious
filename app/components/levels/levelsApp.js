@@ -2,7 +2,19 @@
     'use strict';
 
     angular.module('whySoSerious.levels', [])
-        .config(['$stateProvider', '$urlRouterProvider', routeConfig]);
+        .config(['$stateProvider', '$urlRouterProvider', routeConfig])
+        .directive('ngEnter', function() {
+            return function(scope, element, attrs) {
+                element.bind("keydown keypress", function(event) {
+                    if (event.which === 13) {
+                        scope.$apply(function() {
+                            scope.$eval(attrs.ngEnter);
+                        });
+                        event.preventDefault();
+                    }
+                });
+            };
+        });;
     /* @ngInject */
 
     function routeConfig($stateProvider, $urlRouterProvider) {

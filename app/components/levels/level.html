@@ -1,17 +1,9 @@
-
-<html>
-<head>
-	<title>Levels</title>
-</head>
-<body>
-	<h1 class="choose-level">Choose Level</h1>
-	<div class="list">
-		<ul class="level-container">
-			<li ng-repeat="lvl in levels track by $index" ng-class="{'disable-level': $index>0}" ui-sref="levels.question({levelId:lvl.id})">
-				<img src="assets/img/level.jpg"/>
-				<span class="level-name">{{lvl.name}}</span>
-			</li>
-		</ul>
-	</div>
-</body>
-</html>
+<h1 class="choose-level">Choose Level</h1>
+<div class="list">
+	<ul class="level-container">
+		<li ng-repeat="lvl in levels track by $index" ng-class="{'disable-level': $index>0}" ui-sref="levels.question({levelId:lvl.id})">
+			<img src="assets/img/level.jpg" />
+			<span class="level-name">{{lvl.name}}</span>
+		</li>
+	</ul>
+</div>

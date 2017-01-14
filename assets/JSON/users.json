@@ -3,5 +3,6 @@
      "id": 1,
      "level": 1,
      "points": 20,
-     "question": 1
+     "question": 1,
+     "questionCOmpleted":0 
  }]
