@@ -15,6 +15,9 @@
 
         if (localStorage.getItem('userData')) {
             $rootScope.user = JSON.parse(localStorage.getItem('userData'));
+            if($rootScope.user != null) {
+                $rootScope.user.points = 20;                
+            }
         }
 
         $http.get('assets/JSON/levels.json').success(function(response) {
@@ -63,7 +66,6 @@
 
         $scope.checkAnswer = function() {
             if ($scope.answer.toLocaleLowerCase().replace(/ +(?= )/g, '') == $scope.currentQuestion.answer.toLocaleLowerCase().replace(/ +(?= )/g, '')) {
-                console.log("Solved");
                 $rootScope.user.points += 10;
                 $scope.questions[$scope.currentIndex].wrongAnswer = false;
                 $scope.questions[$scope.currentIndex].disabled = true;
@@ -71,7 +73,6 @@
                 localStorage.setItem('userData', JSON.stringify($rootScope.user));
             } else {
                 $scope.questions[$scope.currentIndex].wrongAnswer = true;
-                console.log("ERROR");
             }
         }
     }
