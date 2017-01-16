@@ -3,10 +3,10 @@
 </div>
 <div class="user-bar">
     <div class="user-details">
-        <span>username: {{user.email}}</span>
-        <img src="assets\img\icon.png" class="icon" />
+        <span>User: {{$root.user.displayName}}</span>
+        <img src={{$root.user.image.url}} class="icon" />
         <span class="points">
-            Points: {{user.points}}
+            Points: {{$root.user.points}}
         </span>
         <img src="assets\img\points.png" class="icon" />
     </div>

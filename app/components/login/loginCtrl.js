@@ -31,9 +31,23 @@
                 'approvalprompt': 'force',
                 'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
             };
+
             gapi.auth.signIn(myParams);
+            setTimeout(function() {
+                getInstance();
+            }, 4000);
         }
 
-
+        function getInstance() {
+            gapi.client.load('plus', 'v1', function() {
+                var request = gapi.client.plus.people.get({
+                    'userId': 'me'
+                });
+                request.execute(function(resp) {
+                    // console.log('Retrieved profile for:' + resp.displayName);
+                    localStorage.setItem('userData', JSON.stringify(resp));
+                });
+            });
+        }
     }
 })();
