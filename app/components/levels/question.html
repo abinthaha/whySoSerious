@@ -25,7 +25,7 @@
                     <h4>{{currentQuestion.dialog}}</h4>
                     <input type="text" class="answer-type-area" ng-class="{'que-solved': currentQuestion.disabled, 'wrong-answ': currentQuestion.wrongAnswer}" ng-disabled="currentQuestion.disabled" placeholder="Your Answer Here...(Press Enter to Submit) " ng-model='answer' ng-enter="checkAnswer()"/>
                     <aside class='hints'>
-                        <span class="hint-attract" ng-click="getHint(this)"><img src="../assets/img/hint.png"></span>
+                        <span class="hint-attract" ng-click="getHint(this)"><img src="./assets/img/hint.png"></span>
                         <span class="hint-info">Take a hint using 5 of your points</span>
                         <div class="hint-number-container" ng-class="{'active-hint': currentQuestion.hintActive}">
                             <span class="hint-name">{{currentQuestion.hint}}</span>
