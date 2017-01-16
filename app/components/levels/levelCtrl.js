@@ -12,9 +12,7 @@
         });
 
         $rootScope.user = [];
-        $http.get('assets/JSON/users.json').success(function(response) {
-            $rootScope.user = response[0];
-            localStorage.setItem('userData',JSON.stringify(response[0]));
-        });
+
+        $rootScope.user = JSON.parse(localStorage.getItem('userData'));
     }
 })();

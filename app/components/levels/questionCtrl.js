@@ -5,7 +5,7 @@
         .controller('questionCtrl', questionCtrl);
     /* @ngInject */
 
-    function questionCtrl($scope, $stateParams, $filter, $http, $rootScope) {
+    function questionCtrl($scope, $stateParams, $filter, $http, $rootScope, $location) {
         var level;
         $scope.answer = "";
         $scope.questions = [];
@@ -14,9 +14,11 @@
         $scope.currentIndex = -1;
 
         if (localStorage.getItem('userData')) {
-            $rootScope.user = JSON.parse(localStorage.getItem('userData'));
             if($rootScope.user != null) {
-                $rootScope.user.points = 20;                
+                $rootScope.user.points = 20;
+            }
+            else {
+                $location.path("login");
             }
         }
 
